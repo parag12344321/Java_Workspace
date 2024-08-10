@@ -1,0 +1,71 @@
+Q-1 Select unique job from EMP table.
+ANS - SELECT DISTINCT Job FROM employee
+Q-2 List the details of the emps in asc order of the Dptnos and desc of Jobs?
+ANS - SELECT * FROM employee ORDER BY Deptno ASC, Job DESC
+Q-3 Display all the unique job groups in the descending order?
+ANS - SELECT DISTINCT Job FROM employee ORDER BY Job DESC
+Q-4 List the emps who joined before 1981.
+ANS - SELECT * FROM employee WHERE Hiredate<('1981-01-01')
+Q-5 List the Empno, Ename, Sal, Daily sal of all emps in the asc order of Annsal.
+ANS - SELECT Empno, Ename, Sal, Sal/30 Daily_Sal, 12*Sal Annsal FROM employee ORDER BY Annsal ASC
+Q-6 List the Empno, Ename, Sal, Exp of all emps working for Mgr 7369.
+ANS - SELECT Empno, Ename, Sal FROM employee WHERE Mgr = 7369
+Q-7 Display all the details of the emps who’s Comm. Is more than their Sal?
+ANS - SELECT * FROM employee WHERE Comm > Sal
+Q-8 List the emps who are either ‘CLERK’ or ‘ANALYST’ in the Desc order.
+ANS - SELECT * FROM employee WHERE Job = 'CLERK' OR Job = 'ANALYST' ORDER BY Job DESC
+Q-9 List the emps Who Annual sal ranging from 22000 and 45000.
+ANS - SELECT * FROM employee WHERE 12*Sal BETWEEN 24000 AND 45000
+Q-10 List the Enames those are starting with ‘S’ and with five characters.
+ANS - SELECT Ename FROM employee WHERE LENGTH(Ename) = 5 AND Ename LIKE 'S%'
+Q-11 List the emps whose Empno not starting with digit78.
+ANS - SELECT Empno FROM employee WHERE Empno NOT LIKE '78%'
+Q-12 List all the Clerks of Deptno 20.
+ANS - SELECT * FROM employee WHERE Job = 'CLERK' AND Deptno = '20'
+Q-13 List the Emps who are senior to their own MGRS.
+ANS - SELECT * FROM employee W, employee M WHERE W.Empno = M.Mgr AND W.Hiredate > M.Hiredate
+Q-14 List the Emps of Deptno 20 who’s Jobs are same as Deptno10.
+ANS - SELECT * FROM employee WHERE Deptno = 20 AND Job IN(SELECT Job FROM employee WHERE Deptno = 10)
+Q-15 List the Emps who’s Sal is same as FORD or SMITH in desc order of Sal.
+ANS - SELECT * FROM employee WHERE Sal IN(SELECT Sal FROM employee WHERE (Ename = 'FORD' OR Ename = 'SMITH')) ORDER BY Sal DESC
+Q-16 List the emps whose jobs same as SMITH or ALLEN.
+ANS - SELECT * FROM employee WHERE Job IN(SELECT Job FROM employee WHERE (Ename = 'SMITH' OR Ename = 'ALLEN'))
+Q-17 Any jobs of deptno 10 those that are not found in deptno 20.
+ANS - SELECT * FROM employee WHERE Deptno = 10 AND Job NOT IN(SELECT Job FROM employee WHERE Deptno = 20)
+Q-18 Find the highest sal of EMP table.
+ANS - SELECT MAX(Sal) FROM employee
+Q-19 Find details of highest paid employee.
+ANS - SELECT * FROM employee WHERE Sal IN(SELECT MAX(Sal) FROM employee)
+Q-20 Find the total sal given to the MGR.
+ANS - SELECT SUM(Sal) FROM employee
+Q-21 List the emps whose names contains ‘A’.
+ANS - SELECT * FROM employee WHERE Ename LIKE '%A%'
+Q-22 Find all the emps who earn the minimum Salary for each job wise in ascending order.
+ANS - SELECT * FROM employee WHERE Sal IN(SELECT MIN(Sal) FROM employee GROUP BY Job) ORDER BY Sal ASC
+Q-23 List the emps whose sal greater than Blake’s sal.
+ANS - SELECT * FROM employee WHERE Sal > (SELECT Sal FROM employee WHERE Ename = 'Blake')
+Q-24 Create view v1 to select ename, job, dname, loc whose deptno are same.
+ANS - CREATE VIEW V1 AS SELECT e.ename, e.job, d.dname, d.loc 
+           FROM employee AS e LEFT JOIN dept AS d ON e.Deptno = d.Deptno;
+Q-25 Create a procedure with dno as input parameter to fetch ename and dname.
+ANS - 	DELIMITER //
+
+	CREATE PROCEDURE dno(INOUT depnum int)
+	BEGIN	
+    	SELECT e.ename, d.dname FROM employee AS e 
+    	LEFT JOIN dept AS d ON e.Deptno = d.Deptno;
+	END //
+
+	DELIMITER ;
+Q-26 Add column Pin with bigint data type in table student.
+ANS - ALTER TABLE student ADD Pin BIGINT;
+
+Q-27 Modify the student table to change the sname length from 14 to 40. Create trigger to insert data in emp_log table whenever any update of sal in EMP table. 
+          You can set action as ‘New Salary’.
+ANS - 	DELIMITER $$
+	CREATE TRIGGER `mytrigger` AFTER UPDATE ON `employee`
+ 	FOR EACH ROW
+	 BEGIN
+	INSERT INTO emp_log SET Action='New Salary', New_salary=new.Sal;
+	END $$
+	DELIMITER //
