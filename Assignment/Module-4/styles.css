@@ -1,0 +1,153 @@
+@charset "ISO-8859-1";
+
+/* External CSS */
+.external-style {
+    color: darkred;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.box {
+    border: 2px solid #3498db;
+    margin-bottom: 10px;
+    background-color: #e0f7fa;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Individual Margin and Padding Styles */
+.box1 {
+    /* No margin, no padding */
+}
+
+.box2 {
+    margin: 20px;
+}
+
+.box3 {
+    padding: 20px;
+}
+
+.box4 {
+    margin: 20px;
+    padding: 20px;
+}
+
+
+\\Navigation menu
+/* General Reset */
+* {
+    margin: 0;
+    padding: 10;
+    box-sizing: border-box;
+    
+}
+
+/* Navigation Menu Styling */
+nav {
+    background-color: #333;
+    margin-top: 0;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top:0
+}
+
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+.nav-menu a:hover {
+    color: #ff6347; /* Change to your preferred hover color */
+}
+
+/* Form Styling */
+form {
+    margin: 20px auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style input fields on focus */
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #555;
+}

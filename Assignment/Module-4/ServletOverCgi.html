@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--
+* Discuss the advantages of using servlets over CGI.
+- Servlets: Servlets are written in Java and run within a web server’s 
+  Java Virtual Machine (JVM), enabling efficient multithreading.  
+  Servlet faster request handling and less memory consumption.  
+- CGI: Each request in CGI creates a new process, which is resource-intensive and slow.
+- Servlets: Since servlets are based on Java, they are inherently cross-platform. 
+  Any platform with a JVM can run Java servlets, making them highly portable.
+- CGI: This can sometimes lead to compatibility issues between different server environments.
+- Servlet: The servlet container takes care of resource allocation and deallocation, ensuring smoother memory usage.
+- CGI: Each CGI script runs as a separate process, making memory management more complex and leading to higher memory consumption
+- Servlets are also integrated within Java EE, offering various features like connection pooling, session management, and enterprise-level scalability.
+- CGI: CGI’s process-per-request model does not scale well with high traffic because each request consumes additional system resources.
+- Servlets: Servlets offer built-in session management through the HttpSession API, allowing applications to maintain state across multiple requests easily.
+- CGI has no native support for session management, meaning developers have to implement 
+  their own session-handling logic, often through cookies or hidden form fields.
+- Servlets: The servlet container provides security features like authentication, authorization, and secure session handling.
+- CGI: CGI scripts do not inherently support these security features.
+- Servlets: Java servlets are part of the Java EE ecosystem, which provides features such as EJBs,
+  JSP, and various APIs that simplify the development of large, complex applications.
+- CGI lacks such integration, making it harder to build enterprise-grade applications without extensive custom development.
+
+
+ -->
+
+</body>
+</html>

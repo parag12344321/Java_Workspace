@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+* Introduction to ServletContext and its scope.
+- ServletContext is a powerful interface in Java web development used in servlets 
+  for accessing various aspects of a web application's environment and managing shared data across servlets.
+- ServletContext represents the environment of a web application running on a servlet container, such as Tomcat.
+- Each web application deployed on a servlet container has a unique ServletContext object created
+  when the application is initialized.
+  
+-> Scope of ServletContext:
+- The scope of ServletContext is application-wide; it is shared among all servlets, JSPs, 
+  filters, and other components within a single web application.
+- ServletContext exists from the time the application is started.
+- when the servlet container initializes it the server is shut down.
+- Because of its application-wide scope, it’s suitable for storing data that needs to be shared
+  across multiple servlets and is not tied to a single user session.
+  
+* How to use web application listeners for lifecycle events.
+- Web application listeners are useful for tracking and managing lifecycle events in a 
+  web application, such as application startup, shutdown, session creation, and destruction.
+-> listeners for lifecycle events:
+1. Types of Listeners:
+a) ServletContextListener: Triggered when the application context (overall application) is 
+   initialized or destroyed.
+b) ServletRequestListener: Monitors request lifecycle events, such as request initialization and destruction.
+c) HttpSessionListener: Tracks session lifecycle events, like session creation and invalidation.
+2. ServletContextListener:
+- A ServletContextListener can handle application-wide initialization and cleanup tasks.
+3. HttpSessionListener:
+- An HttpSessionListener tracks the lifecycle of HTTP sessions.
+4. Setting Up a ServletRequestListener: 
+- A ServletRequestListener allows you to listen to the start and end of each request’s lifecycle.
+5. Registering Listeners in web.xml:
+- Alternatively, you can register listeners in the web.xml file if your environment doesn't support annotations.
+6. Using Listeners in Spring Boot:
+- Spring Boot applications often use ApplicationListener to listen for context refresh, close, or specific Spring events.
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

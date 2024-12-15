@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+* Detailed comparison between HttpServlet and GenericServlet.
+-> 1. Generic Servlet:
+- GenericServlet is an abstract class that implements the Servlet interface and provides basic lifecycle methods for servlets.
+- GenericServlet is protocol-agnostic, meaning it is not tied to any specific protocol (like HTTP).
+- The main method in GenericServlet is the service(ServletRequest request, ServletResponse response) method
+- It is used as a base class for creating generic, non-HTTP-specific servlets, although this is rare in web applications.
+
+-> 2. HTTP Servlet:
+- HttpServlet extends GenericServlet and adds support for the HTTP protocol, making it specific to web applications.
+- HttpServlet is designed specifically for handling HTTP requests and provides additional methods 
+  to support HTTP methods (such as GET, POST, PUT, DELETE).
+- Methods:
+  - doGet(HttpServletRequest request, HttpServletResponse response): Handles GET requests.
+  - doPost(HttpServletRequest request, HttpServletResponse response): Handles POST requests.
+  - doPut, doDelete, etc.: Additional methods for other HTTP verbs.
+- Most servlets in a web application extend HttpServlet because they are processing HTTP traffic.
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

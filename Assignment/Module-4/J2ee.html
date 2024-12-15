@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--
+* Introduction to J2EE and its multi-tier architecture.
+-> Introduction to J2EE:
+- Java 2 Platform, Enterprise Edition (J2EE) is a platform developed by
+  Sun Microsystems for building and deploying enterprise-level applications.
+  J2EE simplifies the development process by providing a robust, scalable,
+  and manageable environment that includes a collection of APIs, services,
+  and protocols. Its key focus is on distributed, transactional, 
+  and highly reliable applications.
+- J2EE is built on top of the standard Java platform (Java SE)
+  Some essential components of J2EE include:
+  => Servlets and JavaServer Pages (JSP) for creating dynamic web content.
+  => Enterprise JavaBeans (EJB) for business logic and transactional management.
+  => Java Naming and Directory Interface (JNDI) for directory services.
+  => Java Message Service (JMS) for messaging.
+  => Java Database Connectivity (JDBC) for database interaction.
+  => JavaMail for email integration.
+  
+-> Multi-tier architecture:
+  1. Client Tier:
+  - This is the front-end layer that interacts directly with users.
+    It includes web browsers, desktop applications, 
+    or mobile applications that make HTTP requests or communicate with the server
+    via other protocols.
+  - This layer handles user input, processes it, and sends it to the server.
+  2. Middle Tier (Application Tier or Business Logic Tier):
+  - The middle tier hosts the business logic of the application.
+    This is where the core functionality resides, processing data received from
+    the client, applying business rules, and managing interactions with the database.
+    This tier is typically implemented using Enterprise JavaBeans (EJB),
+    which provide a modular, reusable, and transactional model for business components.  
+  - Web Tier: Handles HTTP requests, manages servlets, JSPs, 
+    and any frameworks like JavaServer Faces (JSF) or Struts.
+  - Business Tier: Consists of EJB components that handle business rules, 
+    transactions, and complex logic.   
+  3. Enterprise Information System (EIS) or Data Tier:
+  - The data tier is responsible for data storage and retrieval. 
+    This tier contains the database server (e.g., MySQL, Oracle) and 
+    other persistence mechanisms.    
+  - It uses Java Database Connectivity (JDBC) to interact with relational databases or other data sources.  
+
+ * Role of web containers, application servers, and database servers.
+ 1. Role of web containers:
+ - It handles HTTP requests and responses, and facilitates communication between
+   client browsers and the application server. 
+ - The web container provides an environment to run web applications, 
+   including the management of request-response cycles, session handling, 
+   and lifecycle management of servlets.
+   
+ 2. Application Servers:
+ - Application servers often integrate with web containers to support 
+   web-based interactions and may communicate with databases to fulfill client requests.
+ 
+ 3. Database Servers:
+ - It stores the data an application needs to function, manages 
+   the relationships between data entities, and processes queries made by application
+   servers or web containers. 
+ - Database servers support structured data storage and handle tasks like indexing,
+   caching, and data replication.   
+   
+
+
+ -->
+
+
+
+</body>
+</html>

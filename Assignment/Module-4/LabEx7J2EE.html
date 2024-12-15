@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+* Draw and explain the J2EE architecture, labeling the layers like the presentation layer,
+business logic layer, and data layer.
+
+					Client Tier(Presentation Layer)
+  							    |
+					 Web Tier (Servlets, JSP, JSF)
+      							|
+			Business Tier (EJBs, Business Services)(Business Logic Layer)
+     						    |
+				Integration Layer (DAOs, JMS, Web Services)
+   							    |
+			Enterprise Information Systems Tier (Database) (Data Layer)
+			
+-> Explain the J2EE architecture:
+   1. Client Tier (Presentation Layer):
+   - Interacts with the user directly, presenting information and capturing input.
+   - Components: Web browsers, mobile apps, desktop applications, or other clients.
+   - Technologies Used: HTML, JSP (JavaServer Pages), JSF (JavaServer Faces), Servlets.
+   - Provides the interface for the user, handles user input, and communicates with the server-side components in the application tier.
+   
+   2. Web Tier (Also Part of the Presentation Layer):
+   - Acts as an intermediary between the client and business logic layers, handling HTTP requests, and generating responses.
+   - Components: JSP, Servlets, JSF, and web frameworks like Spring MVC or Struts.
+   - Accepts user requests, forwards them to the business layer, and generates dynamic web pages for responses.
+   
+   3. Business Tier (Business Logic Layer):
+   - Manages the core business logic of the application, performing operations required by the client layer.
+   - Enterprise JavaBeans (EJB), Spring beans, or other POJOs (Plain Old Java Objects).
+   Processes the main business logic, performs validations, enforces rules, and handles security, authentication, and authorization.
+   
+   4. Integration (Data Access) Layer:
+   - Data Access Objects (DAOs), connectors for messaging systems (JMS), and web services.
+   - JPA (Java Persistence API), Hibernate, JDBC (Java Database Connectivity), 
+     JMS (Java Message Service), SOAP/REST for web services.	
+   - Manages interactions with the database, performs CRUD operations.
+   
+   5. Enterprise Information Systems (EIS) Tier (Data Layer):
+   -  Database servers, legacy systems, ERP systems.
+   - RDBMS (e.g., MySQL, Oracle), NoSQL databases, file storage.
+   - Stores the application's data and performs data retrieval and storage operations.  
+			
+
+
+
+
+
+ -->
+
+
+
+</body>
+</html>
