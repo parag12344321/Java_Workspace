@@ -1,0 +1,22 @@
+package Assignment0407;
+
+import java.util.HashSet;
+
+public class AppendHashSetPg57
+{
+	public static void main(String[] args) {
+		
+	
+	// Create a empty hash set
+    HashSet<String> h_set = new HashSet<String>();
+  // use add() method to add values in the hash set
+    h_set.add("Green");
+    h_set.add("Red");
+    h_set.add("Orange");		  
+    h_set.add("Black");
+    h_set.add("White");
+    /// Append (add) a specified element to the HashSet
+ // print the hash set
+    System.out.println("The Hash Set: " + h_set);
+}
+}
